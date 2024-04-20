@@ -1,0 +1,74 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  .chaptersGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .chapterCard {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chapterCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .cardContent {
+    padding: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  .cardTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .cardDescription {
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .learnMore {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ff6b6b;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .learnMore:hover {
+    background-color: #ff4d4d;
+  }
+  
+  .learnMoreText {
+    font-weight: 500;
+  }
+  
+  .learnMoreIcon {
+    font-size: 1.2rem;
+  }
