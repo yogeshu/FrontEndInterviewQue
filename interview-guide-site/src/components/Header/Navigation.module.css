@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+}
+
+.menuButton {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;  /* Initially hidden in desktop view */
+    transition: transform 0.3s ease;
+}
+
+.menuButton.active {
+    transform: rotate(90deg);
+}
+.navOpen, .navClosed {
+    transition: background-color 0.3s ease;
+}
+
+.navOpen {
+    background-color: rgba(248, 249, 250, 0.95); /* slightly transparent white */
+}
+.navClosed {
+    display: none;
+}
+
+.navLink {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navLink:hover, .navLink:focus {
+    color: #0056b3;
+    transform: translateY(-2px); /* subtle lift effect */
+}
+
+@media (min-width: 768px) {
+    .menuButton {
+        display: none;
+    }
+
+    .navOpen, .navClosed {
+        flex-direction: row;
+        display: flex;
+    }
+
+    .navLink {
+        padding: 0 10px;
+    }
+}
