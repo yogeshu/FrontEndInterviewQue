@@ -9,9 +9,7 @@ const Navigation = () => {
   return (
     <nav className={styles.navigation}>
       <div className={styles.container}>
-        <Link to="/" className={styles.brand}>
-          <i className="fas fa-book"></i> My Learning App
-        </Link>
+        
         <button
           onClick={toggleMenu}
           className={`${styles.menuButton} ${isOpen ? styles.active : ''}`}

@@ -6,6 +6,7 @@ import Exercises from 'pages/Exercises/Exercises';
 import Contributions from 'pages/Contributions/Contributions';
 import Header from 'components/Header/Header';
 import ChapterDetail from 'components/ChapterDetail/ChapterDetail';
+import ExercisesDetail from 'components/ExercisesDetail/ExercisesDetail';
 
 
 function AppRouter() {
@@ -16,8 +17,8 @@ function AppRouter() {
                 <Route path="/" element={<Home />} />
                 <Route path="/chapters" element={<Chapters />} />
                 <Route path="/chapters/:chapterId" element={<ChapterDetail />} />
-
-                <Route path="/exercises" element={<Exercises />} />
+                <Route path="/exercises" element={<Exercises />}  />
+                <Route path="/exercises/:exerciseId" element={<ExercisesDetail/>} />
                 <Route path="/contributions" element={<Contributions />} />
             </Routes>
         </Router>
