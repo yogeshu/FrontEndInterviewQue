@@ -1,0 +1,111 @@
+/* Container styles */
+.container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  /* Title styles */
+  .title {
+    font-size: 2.5rem; /* Increased font size for better visibility */
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px; /* Increased margin bottom for better spacing */
+  }
+  
+  /* Filter and search container */
+  .filterContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; /* Increased margin bottom for better spacing */
+    flex-wrap: wrap;
+    gap: 20px; /* Added gap between filter buttons and search input */
+  }
+  
+  .filterButtons,
+  .searchContainer {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Button styles */
+  .filterButton {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Added color transition */
+    border-radius: 5px; /* Added border radius for better appearance */
+  }
+  
+  .filterButton.active,
+  .filterButton:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+  }
+  
+  /* Search input styles */
+  .searchInput {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem; /* Added font size for better visibility */
+  }
+  
+  /* Project list styles */
+  .projectList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px; /* Increased gap between projects for better spacing */
+  }
+  
+  .project {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.3s, transform 0.3s;
+    background-color: #ffffff; /* Added background color for better visibility */
+  }
+  
+  .project:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+  
+  .projectTitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .projectDescription {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px; /* Increased margin bottom for better spacing */
+  }
+  
+  .tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.9rem; /* Reduced font size for better appearance */
+  }
+  
+  .easy {
+    background-color: #4caf50;
+  }
+  
+  .medium {
+    background-color: #ffc107;
+  }
+  
+  .hard {
+    background-color: #f44336;
+  }

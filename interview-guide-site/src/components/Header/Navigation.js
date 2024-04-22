@@ -46,6 +46,14 @@ const Navigation = () => {
             <span className={styles.linkText}>Exercises</span>
           </Link>
           <Link
+            to="/projects"
+            className={styles.navLink}
+            onClick={toggleMenu}
+            aria-label="Projects"
+          >
+<i class="fas fa-project-diagram"></i>            <span className={styles.linkText}>Projects</span>
+          </Link>
+          <Link
             to="/contributions"
             className={styles.navLink}
             onClick={toggleMenu}
