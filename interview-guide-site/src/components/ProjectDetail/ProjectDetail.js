@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './ProjectDetail.module.css';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { useParams } from 'react-router-dom';
 
 const projectsData = [
     {
@@ -215,11 +216,12 @@ const projectsData = [
       `
     },
   ];
-  const ProjectDetail = ({ projectId }) => {
+  const ProjectDetail = () => {
+    const { projectId } = useParams();
+    const project = projectsData.find((ex) => ex.id === parseInt(projectId));
     const [showCode, setShowCode] = useState(false);
   
     // Find the project by ID
-    const project = projectsData.find(p => p.id === projectId);
   
     const toggleCodeVisibility = () => {
       setShowCode(!showCode);

@@ -24,7 +24,7 @@ function AppRouter() {
                 <Route path="/exercises" element={<Exercises />}  />
                 <Route path="/exercises/:exerciseId" element={<ExercisesDetail/>} />
                 <Route path="/projects" element={<Projects />} />
-             <Route path="/projects/:projectId" render={(props) => <ProjectDetail projectId={parseInt(props.match.params.projectId, 10)} />} />
+                <Route path="/projects/:projectId" element={<ProjectDetail />} />
 
                 <Route path="/contributions" element={<Contributions />} />
             </Routes>
