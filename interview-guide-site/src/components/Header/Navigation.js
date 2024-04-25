@@ -9,7 +9,7 @@ const Navigation = () => {
   return (
     <nav className={styles.navigation}>
       <div className={styles.container}>
-        
+
         <button
           onClick={toggleMenu}
           className={`${styles.menuButton} ${isOpen ? styles.active : ''}`}
@@ -51,7 +51,7 @@ const Navigation = () => {
             onClick={toggleMenu}
             aria-label="Projects"
           >
-<i class="fas fa-project-diagram"></i>            <span className={styles.linkText}>Projects</span>
+            <i class="fas fa-project-diagram"></i>            <span className={styles.linkText}>Projects</span>
           </Link>
           <Link
             to="/contributions"

@@ -24,15 +24,45 @@ const Home = () => {
     ],
   };
 
+  const features = [
+    {
+      heading: 'Interview Coaching',
+      description: 'Personalized coaching sessions to help you excel in interviews.',
+    },
+    {
+      heading: 'Resume Reviews',
+      description: 'Expert advice to craft a resume that stands out.',
+    },
+    {
+      heading: 'Code Challenges',
+      description: 'Practice with real-world problems to sharpen your coding skills.',
+    },
+  ];
+
+  const testimonials = [
+    {
+      text: 'This guide helped me land my dream job!',
+      author: 'Jane Doe',
+    },
+    {
+      text: 'The best resource for preparing technical interviews.',
+      author: 'John Smith',
+    },
+    {
+      text: 'Highly recommend to anyone in tech!',
+      author: 'Emily White',
+    },
+  ];
+
   return (
     <div className={styles.home}>
-      <div className={styles.hero}>
+      <section className={styles.hero}>
         <h1 className={styles.heading}>Welcome to the Frontend Interview Prep Guide!</h1>
         <p className={styles.subheading}>Master frontend development skills and prepare for job interviews with confidence.</p>
         <button className={styles.ctaButton}>Get Started</button>
-      </div>
+      </section>
 
-      <div className={styles.section}>
+      <section className={styles.section}>
         <h2 className={styles.sectionHeading}>About Us</h2>
         <div className={styles.aboutContent}>
           <div className={styles.aboutImageContainer}>
@@ -43,45 +73,33 @@ const Home = () => {
             <p>Our content is crafted by industry experts with years of experience in both teaching and software development. Whether you are beginning your journey or looking to refine your skills, our guide is tailored to help you succeed at every step of your interview process.</p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className={`${styles.section} ${styles.featuresSection}`}>
+      <section className={`${styles.section} ${styles.featuresSection}`}>
         <h2 className={styles.sectionHeading}>Our Services</h2>
         <div className={styles.features}>
-          <div className={styles.featureItem}>
-            <h3 className={styles.featureHeading}>Interview Coaching</h3>
-            <p className={styles.featureDescription}>Personalized coaching sessions to help you excel in interviews.</p>
-          </div>
-          <div className={styles.featureItem}>
-            <h3 className={styles.featureHeading}>Resume Reviews</h3>
-            <p className={styles.featureDescription}>Expert advice to craft a resume that stands out.</p>
-          </div>
-          <div className={styles.featureItem}>
-            <h3 className={styles.featureHeading}>Code Challenges</h3>
-            <p className={styles.featureDescription}>Practice with real-world problems to sharpen your coding skills.</p>
-          </div>
+          {features.map((feature, index) => (
+            <div key={index} className={styles.featureItem}>
+              <h3 className={styles.featureHeading}>{feature.heading}</h3>
+              <p className={styles.featureDescription}>{feature.description}</p>
+            </div>
+          ))}
         </div>
-      </div>
+      </section>
 
-      <div className={styles.section}>
+      <section className={styles.section}>
         <h2 className={styles.sectionHeading}>Testimonials</h2>
         <div className={styles.testimonialsSlider}>
           <Slider {...settings}>
-            <div className={styles.testimonialItem}>
-              <p className={styles.testimonialText}>"This guide helped me land my dream job!"</p>
-              <p className={styles.testimonialAuthor}>- Jane Doe</p>
-            </div>
-            <div className={styles.testimonialItem}>
-              <p className={styles.testimonialText}>"The best resource for preparing technical interviews."</p>
-              <p className={styles.testimonialAuthor}>- John Smith</p>
-            </div>
-            <div className={styles.testimonialItem}>
-              <p className={styles.testimonialText}>"Highly recommend to anyone in tech!"</p>
-              <p className={styles.testimonialAuthor}>- Emily White</p>
-            </div>
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className={styles.testimonialItem}>
+                <p className={styles.testimonialText}>{testimonial.text}</p>
+                <p className={styles.testimonialAuthor}>- {testimonial.author}</p>
+              </div>
+            ))}
           </Slider>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
