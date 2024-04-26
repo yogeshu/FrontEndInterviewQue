@@ -1,17 +1,30 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import chapterDetails from 'utils/constants/chapterDetails'; // Assuming this file contains detailed data for chapters
+import styles from './ChapterDetail.module.css';
 
 const ChapterDetail = () => {
-    let { chapterId } = useParams();
+  const { chapterId } = useParams();
+  const chapter = chapterDetails.find(ch => ch.id === parseInt(chapterId));
 
-    // Placeholder for chapter content, replace with actual data fetching or state management logic
-    return (
-        <div>
-            <h1>Chapter Details</h1>
-            <p>Displaying details for chapter ID: {chapterId}</p>
-            {/* Add content retrieval and display logic here */}
-        </div>
-    );
+  if (!chapter) {
+    return <div className={styles.notFound}>Chapter not found!</div>;
+  }
+
+  return (
+    <div className={styles.detailContainer}>
+      <h1 className={styles.title}>{chapter.title}</h1>
+      <div className={styles.content}>
+        {chapter.sections.map((section, index) => (
+          <div key={index} className={styles.section}>
+            <h2 className={styles.sectionTitle}>{section.title}</h2>
+            <p className={styles.sectionContent}>{section.content}</p>
+            {section.code && <pre className={styles.code}><code>{section.code}</code></pre>}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default ChapterDetail;
