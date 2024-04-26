@@ -109,3 +109,35 @@
   .hard {
     background-color: #f44336;
   }
+
+  .filterButton {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: none;
+    background-color: #f4f4f4;
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .filterButton.active,
+  .filterButton:hover {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  .tag {
+    padding: 2px 8px;
+    margin-right: 5px;
+    background-color: #ccc;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  .tag.javascript { background-color: #f0db4f; color: #000; }
+  .tag.react { background-color: #61DBFB; }
+  .tag.css { background-color: #2965f1; }
+  .tag.html { background-color: #e34c26; }
+  .tag.json { background-color: #8bc34a; }
+  
