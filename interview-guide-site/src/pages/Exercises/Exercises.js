@@ -5,8 +5,13 @@ import styles from './Exercises.module.css';
 const exercisesData = [
   { id: 1, title: "CSS Box Model", description: "Understand how the CSS box model works.", difficulty: "Easy", details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut velit et risus auctor scelerisque eu eu lacus. Sed fringilla libero sit amet eros efficitur, a lacinia ligula convallis." },
   { id: 2, title: "Flexbox Layout", description: "Create a layout using CSS Flexbox.", difficulty: "Medium", details: "Vestibulum id ligula sed quam convallis maximus. Nam ultricies libero vel purus interdum dictum. Curabitur ac odio vitae eros dapibus tristique." },
-  { id: 3, title: "React State", description: "Manage state in a React component without hooks.", difficulty: "Hard", details: "Donec vitae eros nec sapien ultricies malesuada. Nulla facilisi. Integer eget sollicitudin justo. Cras suscipit velit vel diam ultricies, vel varius dui dictum." }
+  { id: 3, title: "React State", description: "Manage state in a React component without hooks.", difficulty: "Hard", details: "Donec vitae eros nec sapien ultricies malesuada. Nulla facilisi. Integer eget sollicitudin justo. Cras suscipit velit vel diam ultricies, vel varius dui dictum." },
+  { id: 4, title: "Advanced CSS Selectors", description: "Explore complex CSS selectors to target elements precisely.", difficulty: "Medium", details: "Phasellus in felis nec velit maximus cursus. Etiam vitae tortor et ipsum mollis consequat. Phasellus ultricies, sem ut fermentum ullamcorper, arcu magna cursus nulla, non sodales dui dolor eget felis." },
+  { id: 5, title: "Building a REST API", description: "Learn to build a basic REST API with Node.js and Express.", difficulty: "Hard", details: "Quisque id dictum urna. Suspendisse potenti. Suspendisse et nisi nec nunc rutrum fringilla nec non dolor. Nullam ut mauris eros. Nulla elementum sed turpis ac vehicula." },
+  { id: 6, title: "Responsive Web Design", description: "Make your web applications responsive and mobile-friendly.", difficulty: "Medium", details: "Aliquam erat volutpat. In tincidunt orci porta, dapibus sapien a, aliquam lorem. Vivamus non felis dapibus, ullamcorper leo ut, scelerisque magna." },
+  { id: 7, title: "JavaScript Asynchronous Programming", description: "Master asynchronous programming in JavaScript using callbacks, promises, and async/await.", difficulty: "Hard", details: "Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit." }
 ];
+
 
 const Exercises = () => {
   const [filter, setFilter] = useState('All');
